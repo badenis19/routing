@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from "./Nav";
+import About from "./About";
+import Shop from "./Shop";
+// react router libraries to import to handle routing
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+// everything between the router tags will be able to use routing
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+      <div className="App">
+        <Nav />
+
+        <Route path="/about" /> 
+        
+        <Shop />
+      </div>
+
+    </Router>
   );
 }
 
