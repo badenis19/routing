@@ -3,6 +3,7 @@ import './App.css';
 import Nav from "./Nav";
 import About from "./About";
 import Shop from "./Shop";
+import ItemDetail from "./ItemDetail";
 // react router libraries to import to handle routing
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -32,7 +33,12 @@ function App() {
           {/* On path /shop , render the component Shop */}
           <Route 
           path="/shop" 
+          exact
           component={Shop} />
+
+          <Route 
+          path="/shop/:id" 
+          component={ItemDetail} />
 
         </Switch>
 
