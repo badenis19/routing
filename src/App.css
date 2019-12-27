@@ -17,4 +17,10 @@ nav {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  
+}
+
+.nav-links li {
+  text-decoration: none;
+
 }
