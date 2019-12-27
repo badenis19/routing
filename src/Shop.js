@@ -4,18 +4,25 @@ import { Link } from "react-router-dom";
 
 function Shop() {
 
-  // the empty bracke are to specify that the function will only run when the component mounts 
+  // useEffect used to run the fetchItems function
+  // the empty brackets as secon argumenets are there to specify that the function will only run when the component mounts 
   useEffect(() => {
     fetchItems();
   }, [])
 
+  // items is the variable, setItems is used to change the value of item
   const [items, setItems] = useState([]);
-
+  
+  // making API call 
   const fetchItems = async () => {
+    // using async as it coming from a DB
     const data = await fetch('https://age-of-empires-2-api.herokuapp.com/api/v1/civilizations');
 
+    // converting data receives to a JSON
     const items = await data.json()
+    // printing the result of call on the browser console
     console.log(items.civilizations);
+    // calling the methi
     setItems(items.civilizations);
 
   }

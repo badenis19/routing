@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+// import NameOfComponent from "path"
 import Nav from "./Nav";
 import About from "./About";
 import Shop from "./Shop";
@@ -41,9 +42,6 @@ function App() {
           component={ItemDetail} />
 
         </Switch>
-
- 
-
       </div>
 
     </Router>
