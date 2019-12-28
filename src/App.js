@@ -1,3 +1,4 @@
+// Done using https://www.youtube.com/watch?v=Law7wfdg_ls
 import React from 'react';
 import './App.css';
 // import NameOfComponent from "path"
@@ -18,6 +19,7 @@ function App() {
         {/* Nav component remain as we want it on every pages */}
         <Nav />
 
+        {/* Use of switch, as soon as it find path it stops */}
         <Switch>
 
           {/* use of exact will display Home compoenent only when the path is '/' */}

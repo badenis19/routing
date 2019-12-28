@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 function Shop() {
 
   // useEffect used to run the fetchItems function
-  // the empty brackets as secon argumenets are there to specify that the function will only run when the component mounts 
+  // the empty brackets as second argumenet are there to specify that the function will only run when the component mounts 
   useEffect(() => {
     fetchItems();
   }, [])
 
-  // items is the variable, setItems is used to change the value of item
+  // items is the variable, setItems is used to change the value of item 
   const [items, setItems] = useState([]);
   
   // making API call 
@@ -22,7 +22,7 @@ function Shop() {
     const items = await data.json()
     // printing the result of call on the browser console
     console.log(items.civilizations);
-    // calling the methi
+    // calling the method
     setItems(items.civilizations);
 
   }
@@ -34,11 +34,12 @@ function Shop() {
         <h1 key={item.id}>
           <Link to={`/shop/${item.id}`}>{item.name}</Link>
         </h1>
-      )
-      
-      )}
+      ))}
     </div>
   );
 }
 
 export default Shop;
+
+
+
